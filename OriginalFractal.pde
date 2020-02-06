@@ -1,9 +1,9 @@
 float max_depth = 1;
 
 final float initialX = 250;
-final float initialY = 250;
+final float initialY = 400;
 
-final float len = 20;
+final float len = 35;
 
 final int base_color = 50;
 
@@ -33,7 +33,7 @@ void frac(float x, float y, float theta, int depth) {
   if (depth < max_depth) {
       frac(endX, endY, theta - PI / 5.0, depth + 1);
       frac(endX, endY, theta + PI / 5.0, depth + 1);
-      frac(endX, endY, theta + PI / 10.0, depth + 1);
+      frac(endX, endY, theta - PI / 10.0, depth + 1);
       frac(endX, endY, theta + PI / 10.0, depth + 1);
   }
   stroke(col, 50, 50);
